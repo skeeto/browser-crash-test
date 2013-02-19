@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Browser Crash Test</h1>
+  <script>
+    function generate() {
+        for (var i = 0; i < 100000000; i++) {
+            new XMLHttpRequest();
+        }
+        setTimeout(generate, 0);
+    }
+    setTimeout(generate, 0);
+  </script>
+</body>
+</html>
